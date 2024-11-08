@@ -1,7 +1,11 @@
 @import './base.css';
-
+div#app {
+  margin: 0 auto;
+  width: 100%;
+}
 #app {
   max-width: 1280px;
+  /*max-width: 100%;*/
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
@@ -14,6 +18,7 @@ a,
   color: #2365c4;
   transition: 0.4s;
   padding: 3px;
+
 }
 
 @media (hover: hover) {
@@ -32,5 +37,11 @@ a,
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
+    transition: all .3s;
+  }
+  .active_con#app{
+    grid-template-columns: 0.3fr 1fr;
+    max-width: 100%;
   }
 }
+
