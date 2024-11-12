@@ -6,18 +6,19 @@ body {
   background-image: linear-gradient(to right, #d9dde1, #d2e3f5);
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   letter-spacing: 0.01071em;
+  font-size: 14px;
 }
 .paper {
   position: relative;
   margin: 0px auto 20px auto;
-  width: 794px;
+  width: 914px;
   min-height: 500px;
   height: auto;
   background-color: white;
   border-radius: 3px;
   padding: 60px;
   margin-top: 120px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   background-image: linear-gradient(0deg, #fff, #f9fbff);
 }
 .jianlibase {
@@ -40,8 +41,8 @@ body {
 .photo-container {
   position: relative;
   float: right;
-  width: 135px;
-  height: 190px;
+  width: 120px;
+  height: 170px;
   background-color: transparent;
   border-radius: 0px;
   overflow: hidden;
@@ -54,7 +55,8 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100%;
+  //width: 100%;
+  width: 122px;
   height: auto;
   border: none;
   padding-right: 2px;
@@ -78,10 +80,10 @@ img[src=""], img:not([src]){
 .jl-item {
   position: relative;
   width: 100%;
-  padding-left: 30px;
+  //padding-left: 30px;
   height: auto;
-  margin-left: -30px;
-  background-color: white;
+  //margin-left: -30px;
+  //background-color: white;
 }
 .jl-jy-item {
   position: relative;
@@ -89,7 +91,7 @@ img[src=""], img:not([src]){
   padding-left: 30px;
   height: auto;
   margin-left: -30px;
-  background-color: white;
+  //background-color: white;
 }
 .sort-item {
   position: absolute;
@@ -236,11 +238,11 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
 #desc {
   position: absolute;
   left: 0px;
-  width: 300px;
   top: 80px;
   color: #706f6f;
   text-align: left;
-  padding-right: 2px;
+  padding-right: 3px;
+  width: calc(100% - 120px);
 }
 .education {
   position: absolute;
@@ -368,7 +370,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   font-size: 15px;
   -webkit-user-modify: read-write-plaintext-only;
 }
-#tech, #summary, #extend {
+#tech, .summary, #extend {
   position: relative;
   height: auto;
   text-align: left;
@@ -395,12 +397,39 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   color: #1f62f5;
   cursor: pointer;
 }
+.companyItem{
+  padding-bottom: 10px;
+}
 .company-logo {
   transition: all 0.5s;
-  float: right;
-  margin-top: -60px;
-  margin-right: -230px;
-  height: 40px
+  //float: right;
+  //margin-top: -60px;
+  //margin-right: -145px;
+  //height: 40px
+}
+.company_con {
+  width: calc(100% - 135px);
+}
+.company_con_tit {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+span.company_name {
+  width: 100%;
+  text-align: center;
+}
+b.bold{
+  font-weight: 600;
+  color: #333333;
+}
+.bold-font{
+  font-weight: 600;
+  color: #333333;
+}
+.el-image.company-logo {
+  width: 100px !important;
+  height: 100% !important;
 }
 .company-logo:hover {
   cursor: pointer;
@@ -414,35 +443,49 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   padding: 5px;
   text-align: left;
   color: black;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .jingyan-header {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px dashed whitesmoke;
+  display: flex;
+  justify-content: space-between;
+
+}
+.jingyan_list {
+  //display: flex;
 }
 .jingyan-name {
   float: left;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: bold;
+
 }
 .jingyan-role {
-  position: absolute;
+  //position: absolute;
   left: 300px;
   float: left;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 .jingyan-time {
   float: right;
-  font-size: 14px;
-  margin-right: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  //margin-right: 50px;
+
+}
+.float_left{
+  float: left;
 }
 .jingyan-title {
   line-height: 25px;
   font-size: 14px;
   color: #666;
   margin-top: 5px;
+  white-space: nowrap;
+  //float: left;
 }
 .jingyan-content {
   position: relative;
@@ -453,6 +496,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   font-size: 15px;
   letter-spacing: 0.05em;
   color: black;
+  padding-top: 5px;
   /*-webkit-user-modify: read-write-plaintext-only;*/
 }
 .layui-timeline-title {
@@ -543,7 +587,10 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   display: none;
 }
 .layui-timeline-content {
-  width: 550px;
+  width: calc(100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .aiGenButton {
   position: absolute;
@@ -766,7 +813,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   float: right;
   margin-top: 5px;
   border-radius: 100px;
-  padding: 6px 20px;
+  padding: 0px 20px;
   border: none;
   color: #3b9b59;
   background-color: #E7FAE5;
@@ -780,7 +827,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   width: 100%;
   height: auto;
 }
-#jingyans ul li, #tech ul li, #summary ul li, #extend ul li {
+#jingyans ul li, #tech ul li, .summary ul li, #extend ul li {
   list-style-type: disc;
   padding-left: 5px;
   margin-left: 0px;
@@ -834,9 +881,24 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   cursor: pointer;
   border: 1px solid #e8e8e8;
 }
-
-
-
+.layui-timeline-axis {
+  color: #286cf5 !important;
+  font-size: 10px !important;
+  left: -4px !important;
+}
+.layui-text p{
+  margin: 0px 0 !important;
+}
+.layui-timeline-title{
+  color: #333333;
+}
+.layui-timeline-title {
+  color: #333333;
+  font-size: 17px !important;
+  font-weight: 500;
+  margin-bottom: 0 !important;
+  white-space: nowrap;
+}
 
 
 

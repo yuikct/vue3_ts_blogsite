@@ -32,30 +32,12 @@ export const constantRoute =[
             {
                 path: '/index',
                 name:'home',
-                component: () => import('@/views/HomeView.vue'),
+                component: () => import('@/views/home/index.vue'),
                 meta: {
                     title: '首页',
                     hidden: false,
                     icon: 'HomeFilled',
                 },
-            }, {
-                path: '/about',
-                name: 'about',
-                component: () => import('@/views/AboutView.vue'),
-                meta: {
-                    title: '关于', // 添加标题信息
-                    description: '关于', // 添加描述信息
-                    keepAlive: true // 标识这个页面需要被缓存
-                }
-            }, {
-                path: '/article',
-                name: 'article',
-                component: () => import('@/views/Article.vue'),
-                meta: {
-                    title: '关于', // 添加标题信息
-                    description: '关于', // 添加描述信息
-                    keepAlive: true // 标识这个页面需要被缓存
-                }
             }
         ],
     },

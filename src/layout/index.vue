@@ -6,6 +6,8 @@ let globalStore = useGlobalStore()
 </script>
 
 <template>
+  <div class="layout_container">
+
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -20,6 +22,7 @@ let globalStore = useGlobalStore()
   </header>
 
   <RouterView />
+  </div>
 </template>
 
 <style scoped>

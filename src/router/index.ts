@@ -1,5 +1,5 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/home/index.vue'
 import {constantRoute} from '@/router/routes'
 const router = createRouter(<any>{
   // 路由模式hash
