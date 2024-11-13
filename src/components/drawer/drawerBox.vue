@@ -7,8 +7,17 @@
       @open="onOpen"
       @close="onClose"
       :lock-scroll="false"
+      :modal="modal"
   >
     <div class="drawer_content">
+      <!--      是否开启编辑模式-->
+      <div class="tool_list">
+        <label class="t_label">编辑模式：</label>
+        <div class="t_li">
+          <span class="lab">是否开启：</span>
+          <el-switch v-model="editorInfo.editable" />
+        </div>
+      </div>
       <!--      整体样式-->
       <div class="tool_list">
         <label class="t_label">整体样式：</label>
@@ -37,13 +46,37 @@
                      placement="left"/>
         </div>
       </div>
-      <!--      整体样式-->
+      <!--      履历-->
       <div class="tool_list">
         <label class="t_label">履历：</label>
         <div class="t_li">
           <span class="lab">下内边距：</span>
           <el-slider class='slider-demo-block' size="small" v-model="editorInfo.companyItem.paddingBottom"
                      placement="left"/>
+        </div>
+      </div>
+      <!--      头像-->
+      <div class="tool_list">
+        <label class="t_label">头像：</label>
+        <div class="t_li">
+          <span class="lab">宽：</span>
+          <el-input-number
+              v-model="editorInfo.avatar.width"
+              class="mx-4"
+              :min="1"
+              :max="200"
+              controls-position="right"
+          />
+        </div>
+        <div class="t_li">
+          <span class="lab">高：</span>
+          <el-input-number
+              v-model="editorInfo.avatar.height"
+              class="mx-4"
+              :min="1"
+              :max="200"
+              controls-position="right"
+          />
         </div>
       </div>
 
@@ -53,14 +86,10 @@
 </template>
 
 <script setup lang="ts">
-import {ElDrawer} from 'element-plus';
 import {ref, watch, defineExpose, toRaw} from 'vue';
 import {useGlobalStore} from "@/stores/global";
-import {deepClone} from "@/utils";
-
 const globalStore = useGlobalStore()
-let {editorInfo, setEditor} = globalStore
-console.log(globalStore)
+let {editorInfo} = globalStore
 // 抽屉标题，默认为空字符串
 const drawerTitle = ref('');
 // 是否可见，默认为false
@@ -72,12 +101,12 @@ const drawerSize = ref('30%');
 
 // 当抽屉打开时触发的事件
 const onOpen = () => {
-  console.log('抽屉已打开');
+  // console.log('抽屉已打开');
 };
 
 // 当抽屉关闭时触发的事件
 const onClose = () => {
-  console.log('抽屉已关闭');
+  // console.log('抽屉已关闭');
 };
 
 const props = defineProps({
@@ -100,7 +129,12 @@ const props = defineProps({
   size: {
     type: String,
     default: '30%'
-  }
+  },
+  // 是否需要遮罩层
+  modal: {
+    type: Boolean,
+    default: false
+  },
 });
 
 // 当外部传入的标题改变时，更新内部的抽屉标题
@@ -125,7 +159,6 @@ watch(() => props.size, (newValue) => {
 
 // 向外暴露打开抽屉的方法
 const openDrawer = () => {
-  console.log('di')
   isVisible.value = true;
 };
 
@@ -138,13 +171,7 @@ const closeDrawer = () => {
 const getDrawerVisible = () => {
   return isVisible.value;
 };
-// const getStyles = (styleData:object) => {
-//   let obj = deepClone(toRaw(styleData))
-//   obj.lineHeight = styleData.lineHeight+'px'
-//   obj.marginTop = styleData.marginTop+'px'
-//   obj.marginBottom = styleData.marginBottom+'px'
-//   return obj
-// }
+
 // 定义要向外暴露的属性和方法
 defineExpose({
   openDrawer,

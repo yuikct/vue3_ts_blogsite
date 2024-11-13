@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     VueSetupExtend(),
-    vueDevTools(),
+    // vueDevTools(),
   ],
   resolve: {
     alias: {

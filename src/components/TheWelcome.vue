@@ -15,7 +15,7 @@ import EmailIcon from './icons/IconEmail.vue'
       <DocumentationIcon/>
     </template>
     <template #heading>简介</template>
-    我一直不希望自己只是一个写代码的程序员。I've always aspired to be more than just a code-writing programmer.
+
   </WelcomeItem>
 
   <WelcomeItem>
@@ -30,7 +30,7 @@ import EmailIcon from './icons/IconEmail.vue'
     <template #icon>
       <EcosystemIcon/>
     </template>
-    <template #heading>展示</template>
+    <template #heading>作品展示</template>
       <ul>
         <li>可视化大屏：<a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">可视化大屏</a></li>
         <li>响应式官网：<a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">响应式官网</a></li>
@@ -43,10 +43,12 @@ import EmailIcon from './icons/IconEmail.vue'
     </template>
     <template #heading>联系我</template>
     <a href="https://github.com/yuikct" target="_blank" class="inline">
-      <GithubIcon/>
+<!--      <GithubIcon/>-->
+      <i class="layui-icon layui-icon-github" style="font-size: 24px; color: #333333;"></i>
     </a>
     <a href="mailto:yuikct@163.com" target="_blank" class="inline">
-      <EmailIcon/>
+      <i class="layui-icon layui-icon-email" style="font-size: 24px; color: #333333;"></i>
+<!--      <EmailIcon/>-->
     </a>
   </WelcomeItem>
 

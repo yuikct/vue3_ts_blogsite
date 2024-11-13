@@ -12,11 +12,11 @@ let globalStore = useGlobalStore()
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="Yuikct" />
+      <HelloWorld msg="余夫俗子" />
       <nav>
         <RouterLink to="/">主页</RouterLink>
 <!--        <RouterLink to="/about">关于</RouterLink>-->
-        <RouterLink to="/resume">简历</RouterLink>
+        <RouterLink to="/resume">个人简历</RouterLink>
       </nav>
     </div>
   </header>
@@ -38,7 +38,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin-top: 2rem;
   padding: 1rem 0;
