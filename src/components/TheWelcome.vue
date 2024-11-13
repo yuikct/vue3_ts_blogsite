@@ -32,8 +32,8 @@ import EmailIcon from './icons/IconEmail.vue'
     </template>
     <template #heading>作品展示</template>
       <ul>
-        <li>可视化大屏：<a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">可视化大屏</a></li>
-        <li>响应式官网：<a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">响应式官网</a></li>
+        <li><a href="http://47.119.183.239:81/" target="_blank" rel="noopener">可视化大屏</a></li>
+        <li><a href="http://47.119.183.239:83/" target="_blank" rel="noopener">睐回官网</a></li>
       </ul>
   </WelcomeItem>
 

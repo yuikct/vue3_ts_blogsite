@@ -6,7 +6,7 @@
   <div class="resume-container " :contenteditable="editorInfo.editable" :style="editorInfo.editable?'-webkit-user-modify: read-write-plaintext-only':''">
     <div ref="paper" class="paper decollator" id="paper" :style="newObj.paperPadding" >
       <div class="apply-job-container">
-        <div id="job" >前端开发工程师 <a href="http://zewei.hkfree.work/" target="_blank" class="link">(http://zewei.hkfree.work/)</a></div>
+        <div id="job" >前端开发工程师 <a href="http://47.119.183.239/" target="_blank" class="link">(http://47.119.183.239/)</a></div>
         <div id="status">随时到岗</div>
       </div>
       <div class="jianli-title" :style="newObj.jianliTitle">
@@ -22,7 +22,7 @@
         </div>
         <div id="name" >余泽伟</div>
         <div id="address" > 28岁 男 广州 天河</div>
-        <div id="desc" >5年前端研发经验，主要技术栈为Vue，能够从0到1独立开发PC端，移动端，可视化大屏</div>
+        <div id="desc" >5年前端，能独立开发后台管理系统、可视化大屏及企业官网等PC端，移动端uni-App、微信小程序等项目</div>
 
         <div class="contact-container">
           <div class="contact-item">
@@ -42,7 +42,7 @@
               style="background-color: rgb(38, 38, 38);"></span></div>
           <div class="education-info">
             <div id="education"  style="padding-left: 0px">大专</div>
-            <div id="speciality" >软件开发专业</div>
+            <div id="speciality" >软件技术专业</div>
             <div id="graduation-time"  style="border-right: none">2016-09 ~ 2019-06</div>
           </div>
           <i id="ctrlEducationCard1" class="layui-icon ctrl-education" style="display: none;"></i>
@@ -175,7 +175,7 @@
               </div>
               <div class="jingyan_list">
                 <span class="jingyan-title" >项目简介：</span>
-                <div class="jingyan-content projectDesc" > 这是一个比较综合的大型项目，涵盖了数据可信、文件可信、可信监管、传输服务子系统，旨在对节点、用 户、部门及应用四大对象之间进行的数据信息包括（源点、传输、及交易）的全流程进行跟踪和处理，对数据的交易过程进 行全面的追溯。</div>
+                <div class="jingyan-content projectDesc" > 这是一个比较综合的大型项目，涵盖了数据可信、文件可信、可信监管、传输服务子系统，旨在对节点、用 户、部门及应用四大对象之间进行的数据信息包括（源点、传输、及交易）的全流程进行跟踪和处理，对数据的交易过程进行全面的追溯。</div>
               </div>
               <div class="jingyan_list">
                 <div class="jingyan-title" >我的职责：</div>

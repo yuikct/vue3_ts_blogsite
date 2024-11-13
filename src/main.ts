@@ -8,7 +8,7 @@ import router from './router'
 import '@/styles/index.scss'
 import 'element-plus/dist/index.css'
 import 'layui/dist/css/layui.css';
-import './utils/script.js' //开启禁止用户打开控制台
+// import './utils/script.js' //开启禁止用户打开控制台
 
 import ElementPlus from 'element-plus'
 const app = createApp(App)
