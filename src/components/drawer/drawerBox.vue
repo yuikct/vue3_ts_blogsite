@@ -138,7 +138,7 @@ const props = defineProps({
 });
 
 // 当外部传入的标题改变时，更新内部的抽屉标题
-watch(() => props.title, (newValue) => {
+watch(() => props.title, (newValue:string) => {
   drawerTitle.value = newValue;
 }, {immediate: true});
 

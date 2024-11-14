@@ -1,12 +1,14 @@
 <template>
-  <el-affix :offset="35">
-<!--    <el-button @click="handleDrawer" :disabled="editorInfo.btnEditDisabled"><i class="layui-icon layui-icon-edit"></i>编辑</el-button>-->
+  <el-affix :offset="35" style="display:none">
+    <el-button @click="handleDrawer" :disabled="editorInfo.btnEditDisabled"><i class="layui-icon layui-icon-edit"></i>编辑</el-button>
     <el-button @click="exportHPdf('#paper',editorInfo.pdfFileName,3,'')" :disabled="editorInfo.btnExportDisabled"><i class="layui-icon layui-icon-export"></i>导出PDF</el-button>
   </el-affix>
   <div class="resume-container " :contenteditable="editorInfo.editable" :style="editorInfo.editable?'-webkit-user-modify: read-write-plaintext-only':''">
     <div ref="paper" class="paper decollator" id="paper" :style="newObj.paperPadding" >
       <div class="apply-job-container">
-        <div id="job" >前端开发工程师 <a href="http://47.119.183.239/" target="_blank" class="link">(http://47.119.183.239/)</a></div>
+        <div id="job" >前端开发工程师
+<!--          <a href="http://47.119.183.239/" target="_blank" class="link">(http://47.119.183.239/)</a>-->
+        </div>
         <div id="status">随时到岗</div>
       </div>
       <div class="jianli-title" :style="newObj.jianliTitle">
@@ -289,7 +291,7 @@ const handleAddPxToObject = (obj: Object) =>{
  * 递归处理成css样式
  * 给属性值加 px
  */
-const addPxToObject = (obj) => {
+const addPxToObject = (obj: any) => {
   for (let key in obj) {
     if (typeof obj[key] === 'number') {
       obj[key] += 'px';

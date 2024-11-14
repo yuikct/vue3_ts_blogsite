@@ -30,9 +30,9 @@ document.oncontextmenu = function() {
     event.returnValue = false;
 };
 //禁止文本复制
-document.oncopy = function (){
-    event.preventDefault()
-}
+// document.oncopy = function (){
+//     event.preventDefault()
+// }
 //禁用开发者工具F12
 document.onkeydown = document.onkeyup = document.onkeypress = function(
     event

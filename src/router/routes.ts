@@ -9,7 +9,7 @@ export const constantRoute =[
     //     },
     // },
     {
-        path: '/resume',
+        path: '/index',
         name: 'resume',
         component: () => import('@/views/resume/index.vue'),
         meta: {
@@ -30,7 +30,7 @@ export const constantRoute =[
         redirect: '/index',
         children: [
             {
-                path: '/index',
+                path: '/index1',
                 name:'home',
                 component: () => import('@/views/home/index.vue'),
                 meta: {
