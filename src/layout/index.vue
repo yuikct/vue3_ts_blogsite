@@ -14,7 +14,7 @@ let globalStore = useGlobalStore()
     <div class="wrapper">
       <HelloWorld msg="余夫俗子" />
       <nav>
-        <RouterLink to="/">主页</RouterLink>
+<!--        <RouterLink to="/">主页</RouterLink>-->
 <!--        <RouterLink to="/about">关于</RouterLink>-->
         <RouterLink to="/resume">个人简历</RouterLink>
       </nav>

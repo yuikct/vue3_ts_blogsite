@@ -50,6 +50,10 @@ import EmailIcon from './icons/IconEmail.vue'
       <i class="layui-icon layui-icon-email" style="font-size: 24px; color: #333333;"></i>
 <!--      <EmailIcon/>-->
     </a>
+    <a href="mailto:yuikct@163.com" target="_blank" class="inline">
+      <i class="layui-icon layui-icon-login-wechat" style="font-size: 24px; color: #333333;"></i>
+<!--      <EmailIcon/>-->
+    </a>
   </WelcomeItem>
 
   <WelcomeItem>
@@ -58,9 +62,8 @@ import EmailIcon from './icons/IconEmail.vue'
     </template>
     <template #heading>关于我</template>
 
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    <RouterLink to="/resume" class="a_event">个人简历</RouterLink>
+
   </WelcomeItem>
 </template>
 <style lang="scss" scoped>
@@ -68,5 +71,9 @@ import EmailIcon from './icons/IconEmail.vue'
   display: inline-flex;
   align-items: center;
   margin-right: 5px;
+}
+.a_event{
+  padding-bottom: 2px;
+  border-bottom: 1px solid #333333;
 }
 </style>
