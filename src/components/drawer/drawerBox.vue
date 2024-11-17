@@ -17,6 +17,10 @@
           <span class="lab">是否开启：</span>
           <el-switch v-model="editorInfo.editable" />
         </div>
+        <div class="t_li">
+          <span class="lab">分页：</span>
+          <el-switch v-model="editorInfo.openPaging" />
+        </div>
       </div>
       <!--      整体样式-->
       <div class="tool_list">

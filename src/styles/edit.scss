@@ -30,6 +30,7 @@ body {
   background-image: linear-gradient(0deg, #fff, #f9fbff);
 }
 .decollator{
+  position: relative;
   &:after{
     content: "";
     display: none;
@@ -38,7 +39,8 @@ body {
     height: 1px;
     background-color: #d2d2d2;
     left: 0;
-    top: 1298.89px;
+    top: calc(50% - 11px);
+    transform: translate(0px, 50%);
   }
 }
 .jianlibase {

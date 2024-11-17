@@ -12,16 +12,17 @@ export const useGlobalStore = defineStore('global', {
         editorInfo: {
             pdfFileName:'0 5年前端 余泽伟 17820578612',
             editable: false,//简历是否可编辑
-            btnEditDisabled:true,
+            openPaging: true,//开启分页
+            btnEditDisabled:false,
             btnExportDisabled:false,
             //页面整体
             paperPadding: {
-                padding: 44
+                padding: 40
             },
             //模块标题
             jianliTitle: {
-                lineHeight: 35,
-                marginTop: 10,
+                lineHeight: 30,
+                marginTop: 0,
                 marginBottom: 12
             },
             //工作经验模块
