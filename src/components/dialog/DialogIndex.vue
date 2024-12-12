@@ -66,7 +66,6 @@ watch(() => props.title, (newValue: string) => {
 
 // 当外部传入的可见性改变时，更新内部的是否可见状态
 watch(() => props.visible, (newValue) => {
-  console.log('---');
   isVisible.value = newValue;
 }, { immediate: true });
 

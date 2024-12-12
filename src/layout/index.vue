@@ -9,14 +9,16 @@ let globalStore = useGlobalStore()
   <div class="layout_container">
 
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+<!--    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />-->
+    <img alt="Vue logo" class="logo" src="../assets/img/avatar.jpg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="余夫俗子" />
       <nav>
-<!--        <RouterLink to="/">主页</RouterLink>-->
-<!--        <RouterLink to="/about">关于</RouterLink>-->
-        <RouterLink to="/resume">个人简历</RouterLink>
+        <RouterLink to="/">主页</RouterLink>
+        <RouterLink to="/about">关于</RouterLink>
+        <RouterLink to="/article">归档</RouterLink>
+<!--        <RouterLink to="/resume">个人简历</RouterLink>-->
       </nav>
     </div>
   </header>
@@ -34,6 +36,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  border-radius: 50%;
 }
 
 nav {

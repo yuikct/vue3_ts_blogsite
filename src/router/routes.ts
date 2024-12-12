@@ -9,7 +9,7 @@ export const constantRoute =[
     //     },
     // },
     {
-        path: '/index',
+        path: '/resume',
         name: 'resume',
         component: () => import('@/views/resume/index.vue'),
         meta: {
@@ -30,7 +30,7 @@ export const constantRoute =[
         redirect: '/index',
         children: [
             {
-                path: '/index1',
+                path: '/index',
                 name:'home',
                 component: () => import('@/views/home/index.vue'),
                 meta: {
@@ -38,7 +38,34 @@ export const constantRoute =[
                     hidden: false,
                     icon: 'HomeFilled',
                 },
-            }
+            },{
+                path: '/about',
+                name:'about',
+                component: () => import('@/views/about/index.vue'),
+                meta: {
+                    title: '关于',
+                    hidden: false,
+                    icon: 'HomeFilled',
+                },
+            },{
+                path: '/article',
+                name:'article',
+                component: () => import('@/views/article/index.vue'),
+                meta: {
+                    title: '归档',
+                    hidden: false,
+                    icon: 'HomeFilled',
+                },
+            },{
+                path: '/article/details/:path',
+                name:'ArticleDetail',
+                component: () => import('@/views/article/details.vue'),
+                meta: {
+                    title: '文章详情',
+                    hidden: false,
+                    icon: 'HomeFilled',
+                },
+            },
         ],
     },
 

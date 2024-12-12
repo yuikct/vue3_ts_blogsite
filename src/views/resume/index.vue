@@ -1,12 +1,13 @@
 <template>
-  <el-affix :offset="35">
-    <el-button @click="handleDrawer" :disabled="editorInfo.btnEditDisabled"><i class="layui-icon layui-icon-edit"></i>编辑
-    </el-button>
-    <el-button @click="exportHPdf('#paper',editorInfo.pdfFileName,3,'')" :disabled="editorInfo.btnExportDisabled"><i
-        class="layui-icon layui-icon-export"></i>导出PDF
-    </el-button>
-  </el-affix>
-  <div class="resume-container " :contenteditable="editorInfo.editable"
+<!--  <el-affix :offset="35">-->
+<!--    <el-button @click="handleDrawer" :disabled="editorInfo.btnEditDisabled"><i class="layui-icon layui-icon-edit"></i>编辑-->
+<!--    </el-button>-->
+<!--    <el-button @click="exportHPdf('#paper',editorInfo.pdfFileName,3,'')" :disabled="editorInfo.btnExportDisabled"><i-->
+<!--        class="layui-icon layui-icon-export"></i>导出PDF-->
+<!--    </el-button>-->
+<!--  </el-affix>-->
+    <div class="bg"></div>
+  <div class="resume-container" :contenteditable="editorInfo.editable"
        :style="editorInfo.editable?'-webkit-user-modify: read-write-plaintext-only':''">
     <div ref="paper" class="paper" id="paper" :style="newObj.paperPadding">
       <div class="apply-job-container">
@@ -429,13 +430,21 @@ const exportHPdf = (nodeName: string, fileName: string, scale: number, style: ob
   display: flex;
   align-items: center;
 }
-
+.bg{
+  background-image: linear-gradient(to right, #d9dde1, #d2e3f5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .slider-demo-block .el-slider {
   margin-top: 0;
   margin-left: 12px;
 }
 
 .resume-container {
+  position: relative;
   //height: 100vh;
 
   //.base_tools {

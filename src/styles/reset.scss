@@ -50,3 +50,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+:root {
+	--main-top-padding: 35px;
+	--body-background: #f5f5fa;
+	--accent-color: #34495e;
+	--accent-color-darker: #2c3e50;
+	--accent-color-text: #fff;
+	--body-text-color: #707070;
+	--tag-border-radius: 4px;
+	--section-separation: 40px;
+	--scrollbar-thumb: hsl(0, 0%, 85%);
+	--scrollbar-track: var(--body-background)
+}
+* {
+	box-sizing: border-box;
+}
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--scrollbar-thumb)transparent;
+}
