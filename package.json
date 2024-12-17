@@ -11,14 +11,14 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
-    "@kangc/v-md-editor": "^1.7.12",
     "axios": "^1.7.7",
     "element-plus": "^2.8.7",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.0",
     "html2canvas": "^1.4.1",
     "jinrishici": "^1.0.6",
     "jspdf": "^2.5.2",
     "layui": "^2.9.18",
-    "markdown-it": "^14.1.0",
     "marked": "^13.0.3",
     "nanoid": "^5.0.9",
     "pinia": "^2.2.4",

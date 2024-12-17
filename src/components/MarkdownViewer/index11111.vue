@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts" name="MarkdownDetail">
-import MarkdownIt from 'markdown-it';
+// import MarkdownIt from 'markdown-it';
 
 import { ref, onMounted } from 'vue';
 const props = defineProps({
@@ -17,18 +17,18 @@ const props = defineProps({
   },
 })
 const compiledMarkdown = ref('');
-const md = new MarkdownIt();
-onMounted( async () =>{
-  try {
-    const response = await fetch(props.filePath);
-    console.log('props.filePath;',props.filePath)
-    const text = await response.text();
-    console.log('text:',text)
-    compiledMarkdown.value = md.render(text);
-  }catch (error) {
-    console.error('Error loading Markdown file:', error)
-  }
-})
+// const md = new MarkdownIt();
+// onMounted( async () =>{
+//   try {
+//     const response = await fetch(props.filePath);
+//     console.log('props.filePath;',props.filePath)
+//     const text = await response.text();
+//     console.log('text:',text)
+//     compiledMarkdown.value = md.render(text);
+//   }catch (error) {
+//     console.error('Error loading Markdown file:', error)
+//   }
+// })
 
 </script>
 

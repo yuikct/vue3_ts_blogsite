@@ -59,13 +59,23 @@ export const constantRoute =[
             },{
                 path: '/article/details/:path',
                 name:'ArticleDetail',
-                component: () => import('@/views/article/details.vue'),
+                component: () => import('@/views/article/details1.vue'),
                 meta: {
                     title: '文章详情',
                     hidden: false,
                     icon: 'HomeFilled',
                 },
-            },
+            }
+            // ,{
+            //     path: '/article/details',
+            //     name:'ArticleDetail1',
+            //     component: () => import('@/views/article/details2.vue'),
+            //     meta: {
+            //         title: '文章详情',
+            //         hidden: false,
+            //         icon: 'HomeFilled',
+            //     },
+            // },
         ],
     },
 

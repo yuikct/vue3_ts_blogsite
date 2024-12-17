@@ -14,7 +14,9 @@ export default defineConfig({
     }),
     vueJsx(),
     VueSetupExtend(),
-    Markdown() // 添加 Markdown 插件
+    Markdown({
+      // frontmatter: true, // Disable frontmatter extraction
+    }) // 添加 Markdown 插件
     // vueDevTools(),
   ],
   resolve: {

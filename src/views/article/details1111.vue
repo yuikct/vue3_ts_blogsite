@@ -51,7 +51,7 @@ async function fetchMarkdownFile(filePath: string): Promise<string> {
 // let markdown = ref({})
 // const metaGlob = (value: any) =>{
 //   //获取src/md目录下的所有.md文件
-//   const mdFiles = import.meta.glob('@/contents/**/*.md',{ eager: true });
+  const mdFiles = import.meta.glob('@/contents/**/*.md',{ eager: true });
 //   Object.keys(mdFiles).forEach((key,index) =>{
 //       mdFileArr.value.push({
 //         path: key,

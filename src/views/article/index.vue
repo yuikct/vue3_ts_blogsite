@@ -1,29 +1,51 @@
 <template>
   <div class="ArticleList">
-    <div class="list" v-for="item in fileList" :key="index" @click="toViewer(item)">
-      {{item}}
-    </div>
+    归档
+
+    <MarkdownView v-for="md in mdFileArr"  :key="md.path" :path="md.path" :markdown="md.data"></MarkdownView>
   </div>
 </template>
 
 <script setup lang="ts" name="Article">
+import MarkdownView from "@/components/MarkdownViewer/index.vue"
 import {useRoute,useRouter} from 'vue-router'
+
+import {onMounted, ref} from "vue";
 const route = useRoute()
 const router = useRouter()
-const props = defineProps({
-  fileList:{
-    type:Array,
-    default:[],
-    required: true,
-  }
+// const props = defineProps({
+//   fileList:{
+//     type:Array,
+//     default:[],
+//     required: true,
+//   }
+// })
+// console.log(props)
+// const toViewer = (item) =>{
+//   console.log(item)
+//   // 命名的路由，并加上参数，让路由建立 url
+//   router.push({ name: 'fileMdDetail', params: { filePath: item } })
+//
+// }
+onMounted(()=>{
+  metaGlob()
 })
-console.log(props)
-const toViewer = (item) =>{
-  console.log(item)
-  // 命名的路由，并加上参数，让路由建立 url
-  router.push({ name: 'fileMdDetail', params: { filePath: item } })
+let mdFileArr = ref([])
+const metaGlob = () =>{
+  //获取src/md目录下的所有.md文件
+  const mdFiles = import.meta.glob('@/contents/**/*.md',{ eager: true });
+  let aaa = Object.values(mdFiles);
+  console.log('aaa:',aaa)
+  Object.keys(mdFiles).forEach((key,index) =>{
+      mdFileArr.value.push({
+        path: key,
+        data: mdFiles[key]
+      })
 
+  })
+  console.log(mdFileArr.value)
 }
+
 </script>
 
 <style scoped lang="scss">

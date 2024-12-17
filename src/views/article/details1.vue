@@ -1,21 +1,35 @@
 <template>
-  222
-  <VMdPreview :text="markdownContent"></VMdPreview>
+  <el-main>
+
+    <MarkdownPreview :markdownContent="markdownContent"/>
+  </el-main>
 </template>
 
 <script setup lang="ts" name="ArticleDetails">
-import { ref, onMounted } from 'vue';
-import VMdPreview from '@kangc/v-md-editor/lib/preview';
-import '@kangc/v-md-editor/lib/style/preview.css';
+import {ref, onMounted} from 'vue';
+import MarkdownPreview from '@/components/MarkdownViewer/detail.vue'
+// import VMdPreview from '@kangc/v-md-editor/lib/preview';
+// import '@kangc/v-md-editor/lib/style/preview.css';
+import {useRoute, useRouter} from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+console.log('route:', route.params)
+let filePath = ref('')
+filePath.value = route.params.path
 const markdownContent = ref('');
 onMounted(async () => {
   // 这里同样需要一个函数来读取文件内容
-  markdownContent.value = await fetchMarkdownFile('/src/contents/demo/demo.md');
+  markdownContent.value = await fetchMarkdownFile(filePath.value);
 });
 // 示例函数来读取文件
+//   const mdFiles = import.meta.glob('/src/contents/demo3/demo.md',{ eager: true });
+// console.log(matter(mdFiles))
 async function fetchMarkdownFile(filePath: string): Promise<string> {
   const response = await fetch(filePath);
-  return await response.text();
+  const text = await response.text()
+  // console.log('text:',text)
+  return text;
 }
 </script>
 

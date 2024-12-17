@@ -55,11 +55,7 @@ body {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.9);
 }
-.user-base-container {
-  position: relative;
-  height: 200px;
-  width: 100%;
-}
+
 .photo-container {
   position: relative;
   float: right;
@@ -267,7 +263,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   width: calc(100% - 150px);
 }
 .education {
-  position: absolute;
+  //position: absolute;
   left: 0px;
   top: 115px;
   max-width: 300px;
@@ -278,6 +274,7 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   /* background-color: #3148f6; */
   background-color: whitesmoke;
   color: black;
+  margin-bottom: 5px;
 }
 #school, #school2 {
   position: relative;
@@ -300,13 +297,15 @@ div:-webkit-autofill, input:-webkit-autofill, p:-webkit-autofill, h3:-webkit-aut
   position: relative;
   width: 100%;
   font-size: 13px;
-  clear: both;
+  //clear: both;
   margin-top: 10px;
   padding-top: 3px;
+  display: flex;
+  align-items: center;
 }
 .education-info div {
   text-align: left;
-  float: left;
+  //float: left;
   min-width: 20px;
   /*color: whitesmoke;*/
   color: #3d3d3d;
@@ -442,11 +441,11 @@ span.company_name {
 }
 b.bold{
   font-weight: 600;
-  color: #333333;
+  color: #4b5767;
 }
 .bold-font{
   font-weight: 600;
-  color: #333333;
+  color: #4b5767;
 }
 .el-image.company-logo {
   width: 100px !important;
@@ -473,7 +472,7 @@ b.bold{
   border-bottom: 1px dashed whitesmoke;
   display: flex;
   justify-content: space-between;
-
+  color: #4b5767;
 }
 .jingyan_list {
   //display: flex;
@@ -503,8 +502,8 @@ b.bold{
 }
 .jingyan-title {
   line-height: 25px;
-  font-size: 14px;
-  color: #666;
+  font-size: 15px;
+  color: #4b5767;
   margin-top: 5px;
   white-space: nowrap;
   font-weight: bold;

@@ -43,7 +43,7 @@ const toDetail = (item) => {
 .carousel-con {
   transition: all .5s;
   cursor: pointer;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
   .image {
     border-radius: 10px;
     object-fit: contain;

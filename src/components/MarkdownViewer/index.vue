@@ -2,16 +2,18 @@
 <!--  <div class="markdown-viewer" v-html="compiledMarkdown"></div>-->
   <div class="article-list" @click="toDetail">
     <div class="image"></div>
+
     <div class="details">
-      <div class="title-wrapper">
-        <div class="title">{{markdown.frontmatter.title}}</div>
-        <div class="subtitle">{{markdown.frontmatter.description}}</div>
-      </div>
       <div class="category">
         <ul>
           <li v-for="(item,index) in markdown.frontmatter.tags" :key="index">{{item}}</li>
         </ul>
       </div>
+      <div class="title-wrapper">
+        <div class="title">{{markdown.frontmatter.title}}</div>
+        <div class="subtitle">{{markdown.frontmatter.description}}</div>
+      </div>
+
       <div class="time-module">
         <div class="time--published">{{markdown.frontmatter.date}}</div>
 <!--        <div class="time&#45;&#45;reading">阅读时长：</div>-->
@@ -22,7 +24,7 @@
 </template>
 
 <script setup lang="ts" name="MarkdownView">
-import MarkdownIt from 'markdown-it';
+// import MarkdownIt from 'markdown-it';
 import {useRoute,useRouter} from 'vue-router'
 const router = useRouter()
 import { ref, onMounted } from 'vue';
@@ -37,7 +39,7 @@ const props = defineProps({
   },
 })
 const compiledMarkdown = ref('');
-const md = new MarkdownIt();
+// const md = new MarkdownIt();
 onMounted( async () =>{
   console.log(props.markdown)
 
@@ -99,7 +101,7 @@ const toDetail = () =>{
                   padding: 5px;
                   display: inline-block;
                   border-radius: 5px;
-                  margin: 5px 0px;
+                  margin: 0px 0 5px 0;
                   background-color: #2a9d8f;
                   color: #fff;
                 }
