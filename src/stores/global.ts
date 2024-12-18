@@ -4,11 +4,13 @@ import {defineStore} from 'pinia'
 export const useGlobalStore = defineStore('global', {
 //动作
     actions: {
-
+        setArticleConShow(value:boolean){
+            this.showArticleCon = value
+        }
     },
     //状态
     state: () => ({
-        showMainCon: false,
+        showArticleCon: false,
         editorInfo: {
             pdfFileName:'0 5年前端 余泽伟 17820578612',
             editable: false,//简历是否可编辑

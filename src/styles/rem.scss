@@ -1,3 +1,11 @@
+.layout_container{
+  header{
+    padding-left: 8rem;
+  }
+  main{
+    padding-right: 2rem;
+  }
+}
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
@@ -9,76 +17,102 @@
     display: flex;
     place-items: center;
   }
-
+  #app{
+    display: unset;
+  }
   .layout_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    //padding: 0 2rem;
     transition: all .3s;
+    height: 100%;
+    &.active_con {
+      grid-template-columns: 0.3fr 1fr;
+      width: 100%;
+      header{
+        padding-right: 0 !important;
+        padding-left: 1rem !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logo{
+          margin: 0 auto 0rem !important;
+          width: 5rem !important;
+          height: 5rem !important;
+          transition: all .3s;
+        }
+        .wrapper{
+          margin-left: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .greetings {
+            h1 {
+              font-size: 2rem;
+              transition: all .3s;
+              text-align: center;
+              margin-top: 1rem;
+            }
+            h3{
+              font-size: 1rem;
+              transition: all .3s;
+            }
+          }
+          nav{
+            margin-top: 0;
+            text-align: center;
+          }
+        }
+      }
 
+    }
   }
-  .active_con#app{
-    grid-template-columns: 0.3fr 1fr;
-    max-width: 100%;
-  }
+
+  //.active_con{
+  //  grid-template-columns: 0.3fr 1fr;
+  //  max-width: 100%;
+  //}
 
 }
 
 
 @media screen and (max-width: 1024px){
-  //header{
-  //  padding-right: 0 !important;
-  //  .logo{
-  //    margin: 0 auto 0rem !important;
-  //    width: 5rem !important;
-  //    height: 5rem !important;
-  //    transition: all .3s;
-  //  }
-  //  .wrapper{
-  //    .greetings {
-  //      h1 {
-  //        font-size: 2rem;
-  //        transition: all .3s;
-  //      }
-  //      h3{
-  //        font-size: 1rem;
-  //        transition: all .3s;
-  //      }
-  //    }
-  //    nav{
-  //      margin-top: 0;
-  //    }
-  //  }
-  //}
+  header{
+    padding-right: 0 !important;
+    .logo{
+      margin: 0 auto 0rem !important;
+      width: 5rem !important;
+      height: 5rem !important;
+      transition: all .3s;
+    }
+    .wrapper{
+      .greetings {
+        h1 {
+          font-size: 2rem;
+          transition: all .3s;
+        }
+        h3{
+          font-size: 1rem;
+          transition: all .3s;
+        }
+      }
+      nav{
+        margin-top: 0;
+      }
+    }
+  }
+
   .paper{
     width: 100% !important;
   }
-  .active_con {
-    header{
-      padding-right: 0 !important;
-      .logo{
-        margin: 0 auto 0rem !important;
-        width: 5rem !important;
-        height: 5rem !important;
-        transition: all .3s;
-      }
-      .wrapper{
-        .greetings {
-          h1 {
-            font-size: 2rem;
-            transition: all .3s;
-          }
-          h3{
-            font-size: 1rem;
-            transition: all .3s;
-          }
-        }
-      }
-    }
 
-  }
 }
 @media screen and (max-width: 768px) {
+  //#app{
+  //  display: unset;
+  //}
   header{
     padding-right: 0 !important;
     .logo{

@@ -6,7 +6,7 @@ let globalStore = useGlobalStore()
 </script>
 
 <template>
-  <div class="layout_container">
+  <div class="layout_container" :class="globalStore.showArticleCon?'active_con':''">
 
   <header>
 <!--    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />-->

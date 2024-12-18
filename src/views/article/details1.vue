@@ -6,10 +6,13 @@
 </template>
 
 <script setup lang="ts" name="ArticleDetails">
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, onBeforeMount, onUnmounted} from 'vue';
 import MarkdownPreview from '@/components/MarkdownViewer/detail.vue'
 // import VMdPreview from '@kangc/v-md-editor/lib/preview';
 // import '@kangc/v-md-editor/lib/style/preview.css';
+import {useGlobalStore} from "@/stores/global";
+const globalStore = useGlobalStore()
+// let {showArticleCon} = globalStore
 import {useRoute, useRouter} from 'vue-router'
 
 const route = useRoute()
@@ -19,6 +22,8 @@ let filePath = ref('')
 filePath.value = route.params.path
 const markdownContent = ref('');
 onMounted(async () => {
+  console.log('0000')
+  globalStore.setArticleConShow(true)
   // 这里同样需要一个函数来读取文件内容
   markdownContent.value = await fetchMarkdownFile(filePath.value);
 });
@@ -28,9 +33,16 @@ onMounted(async () => {
 async function fetchMarkdownFile(filePath: string): Promise<string> {
   const response = await fetch(filePath);
   const text = await response.text()
-  // console.log('text:',text)
   return text;
 }
+onBeforeMount(()=>{
+  // console.log('挂载之前')
+  globalStore.setArticleConShow(true)
+})
+onUnmounted(()=>{
+  // console.log('卸载完毕')
+  globalStore.setArticleConShow(false)
+})
 </script>
 
 <style scoped lang="scss">

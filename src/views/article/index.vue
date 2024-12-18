@@ -1,16 +1,14 @@
 <template>
-  <div class="ArticleList">
-    归档
-
+  <el-main class="ArticleList">
     <MarkdownView v-for="md in mdFileArr"  :key="md.path" :path="md.path" :markdown="md.data"></MarkdownView>
-  </div>
+  </el-main>
 </template>
 
 <script setup lang="ts" name="Article">
 import MarkdownView from "@/components/MarkdownViewer/index.vue"
 import {useRoute,useRouter} from 'vue-router'
 
-import {onMounted, ref} from "vue";
+import {onMounted, ref,onBeforeMount,onUnmounted} from "vue";
 const route = useRoute()
 const router = useRouter()
 // const props = defineProps({
@@ -49,5 +47,11 @@ const metaGlob = () =>{
 </script>
 
 <style scoped lang="scss">
-
+.ArticleList{
+  ::v-deep{
+    .article-list{
+      margin-bottom: 1rem;
+    }
+  }
+}
 </style>
